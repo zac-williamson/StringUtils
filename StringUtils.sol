@@ -1,5 +1,11 @@
 pragma solidity ^0.8.7;
 
+/* 
+ * String shenanigans
+ * Author: Zac Williamson, AZTEC
+ * Licensed under the Unlicense
+ */
+ 
 contract StringUtils
 {
     function convertUint256ToBase10String(uint256 input) public pure returns (string memory result) {
