@@ -112,13 +112,13 @@ contract StringUtils
             mstore(add(result, 0x60), mload(add(0x140, offset)))
             
             mstore(0x60, mload(add(result, 0xa0)))
-            mstore(0x80, mload(add(result, 0xe0)))
-            mstore(0xa0, mload(add(result, 0x100)))
-            mstore(0xc0, mload(add(result, 0x120)))
-            mstore(0xe0, mload(add(result, 0x140)))
-            mstore(0x100, mload(add(result, 0x160)))
-            mstore(0x120, mload(add(result, 0x180)))
-            mstore(0x140, mload(add(result, 0x1a0)))
+            mstore(0x80, mload(add(result, 0xc0)))
+            mstore(0xa0, mload(add(result, 0xe0)))
+            mstore(0xc0, mload(add(result, 0x100)))
+            mstore(0xe0, mload(add(result, 0x120)))
+            mstore(0x100, mload(add(result, 0x140)))
+            mstore(0x120, mload(add(result, 0x160)))
+            mstore(0x140, mload(add(result, 0x180)))
 
             mstore(0x40, add(result, 0x80))
         }
