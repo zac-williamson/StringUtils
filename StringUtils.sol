@@ -9,6 +9,16 @@ pragma solidity ^0.8.7;
 contract StringUtils
 {
     function convertUint256ToBase10String(uint256 input) public pure returns (string memory result) {
+        if (input < 10)
+        {
+            assembly {
+                result := mload(0x40)
+                mstore(result, 0x01)
+                mstore8(add(result, 0x20), add(input, 0x30))
+                mstore(0x40, add(result, 0x40))
+            }
+            return result;
+        }
         assembly {
             // Clear out some low bytes
             result := mload(0x40)
